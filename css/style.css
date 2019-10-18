@@ -1,0 +1,301 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+  background-color: #EDC7B7;
+  font-size: 18px;
+  color: #EEE2B5;
+  margin: 0;
+  padding: 0;
+}
+.container{
+    display: grid;
+    grid-template-columns: 100px auto auto auto 100px;
+    grid-template-rows: 30px auto auto auto 100px; 
+    grid-row-gap: 15px;
+    width: 100vw; 
+  }
+h1{
+  font-size: 50px;
+  line-height: 1;
+  padding: 50px 0;
+  text-align: center;
+}
+
+h2{
+  font-size: 32px;
+  line-height: 1.5;
+}
+.nav{
+    grid-column: 1/-1;
+    grid-row:1/auto;
+}
+nav ul{
+  list-style-type: none;
+  text-align: center;
+}
+
+nav li{
+  /*Your code here */
+  padding-right: 20px;
+  display:inline;
+  
+}
+
+nav a{
+  color: #BAB2B5;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav a:hover{
+  text-decoration: underline;
+}
+
+.skip a{
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute; /*Your code here - position relative to the parent */;
+  top: -40px;      /*Your code here - place 40px higher */;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+}
+.skip a:focus{
+  top:0;
+}
+
+*:focus{
+  border: 2px solid black;
+}
+
+footer{
+  background-color:#ddd;
+  color: #BAB2B5;
+  grid-column: 1 / -1;  /*Can you explain what this does?*/
+  grid-row: 5/ auto;   /*Can you rewrite it?*/
+  padding-top: 30px;
+  text-align: center;
+}
+.nav{
+    grid-column: 1 / 6;
+  grid-row: 1;
+  background-color: #ddd;
+  padding: 20px 0; 
+  text-align: left;
+}
+.header{
+    color:white;
+    grid-column: 2/4;
+    grid-row: 2 / 3;
+}
+.headphoto1{
+  background-attachment: fixed;
+  background-image: url("../images/swedflag.jpg");
+    opacity: .8;    
+  background-position: center;  /* Parallax effect */
+  background-repeat: no-repeat; /* Parallax effect */
+  background-size: cover;       /* Parallax effect */
+  color: white;
+  height: 400px;                /* Parallax effect */
+  grid-column: 1 / -1;
+  grid-row: 3 / 4;
+  /*Your code here - cover the entire row*/
+}
+.headphoto2{
+    background-attachment: fixed;
+    background-image: url("../images/sensivogroup.jpg");
+      opacity: .8;    
+    background-position: center;  /* Parallax effect */
+    background-repeat: no-repeat; /* Parallax effect */
+    background-size: cover;       /* Parallax effect */
+    color: white;
+    height: 400px;                /* Parallax effect */
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+}
+.headphoto3{
+    background-attachment: fixed;
+    background-image: url("../images/midsommar.jpg");
+    opacity: .8;    
+    background-position: center;  /* Parallax effect */
+    background-repeat: no-repeat; /* Parallax effect */
+    background-size: cover;       /* Parallax effect */
+    color: white;
+    height: 400px;                /* Parallax effect */
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+}
+#trip-intro{
+    grid-column: 2/4;
+    grid-row: 4/5;
+    color: white;
+}
+#trip-intro > h2{
+    text-align: center;
+
+}
+.container2{
+    position:relative;
+    display: grid;
+    grid-template-columns: 25px auto 25px;
+    grid-template-rows: 30px auto auto auto auto auto auto auto auto auto auto 100px; 
+    grid-row-gap: 15px;
+    width: 100vw; 
+}
+.company{
+    color:white;
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+.FAQ-image{
+grid-column: 2 / 3;
+  grid-row: 5 / 6;
+  max-height:700px;
+  overflow: hidden;
+}
+.FAQ{
+    position:relative;
+    color:white;
+    grid-column: 2 / 3;
+  grid-row: 6 / 7;
+}
+.blogs{
+    position:relative;
+    color:white;
+    grid-row: 8/9;
+    grid-column: 2 / 3;
+}
+.blog-image{
+    grid-column: 2 / 3;
+  grid-row: 7 / 8;
+  max-height: 700px;
+  overflow: hidden;
+}
+.testing{
+    position:relative;
+    color:white;
+    grid-row: 11/12;
+    grid-column: 2 / 3;
+}
+.testing-image{
+grid-column: 2/ 3;
+  grid-row: 9 / 10;
+  max-height: 700px;
+  overflow: hidden;
+}
+.text-block{
+   align-self: center;
+   justify-self: central;
+   background-color: rgba(255, 255, 255, .8);
+   border: 10px solid #BAB2B5;
+   padding: 30px;
+ }
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: center;
+    justify-content: center;
+    min-height: 500px;
+}
+.gallery:hover {
+    border: 1px solid white;
+      }
+      
+.gallery > img {
+    width: 300px;
+    height: auto;
+      }
+div.desc {
+    padding: 15px;
+    text-align: center;
+      }
+
+form{
+    display:grid;
+    grid-column: 2/4;
+    grid-row:4/6;
+}
+
+
+
+@media screen and (min-width: 800px) /*Your code here - Add the first media query.*/{
+
+  .container{
+    /*Your code here */
+    grid-template-columns: 50px auto 500px auto 50px;
+    grid-template-rows: 70px 400px 400px 400px 400px 400px 100px;
+  }
+
+  .nav{
+    background-color: #ddd;
+    justify-self: right;
+    align-self: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    grid-column: 1 / 6;
+    grid-row: 1;
+     /*Your code here */
+  }
+
+  .about-image{
+     /*Your code here */
+    grid-column: 2 / 4;
+    }
+
+  .about{
+    grid-column: 3 / 5;
+    /*Your code here */
+  }
+
+  .method-image{
+    grid-column: 3 / 5;
+    /*Your code here */
+  }
+
+  .method{
+    grid-column: 2 / 4;
+    /*Your code here */
+  }
+
+  .clients-image{
+    grid-column: 2 / 4;
+    /*Your code here */
+  }
+
+  .clients{
+    grid-column: 3 / 5;
+    /*Your code here */
+  }
+
+  .contact-image{
+    grid-column: 3 / 5;
+    /*Your code here */
+  }
+
+  .contact{
+    grid-column: 2 / 4;
+    /*Your code here */
+   }
+
+}  /*End the media query*/
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto; /* Removes scroll animation */
+  }
+
+  .skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: none !important;/* Your code here - set to default setting */
+    transition: default;/* Your code here - set to default setting */
+    z-index:1;
+  }
+}
